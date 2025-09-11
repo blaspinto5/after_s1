@@ -1,0 +1,16 @@
+ya instale y arme le proyecto de spring boot initializer
+lo instale cone stas dependencias;
+
+✔️ Spring Web  
+✔️ Spring Boot DevTools  
+✔️ Spring Data JPA  
+✔️ PostgreSQL Driver  
+✔️ Spring Security  
+✔️ Spring Validation  
+✔️ Lombok  
+✔️ Spring Boot Actuator  
+✔️ Spring Scheduling  
+
+
+
+ahora me voy ainstalar el postgre quiero dejar el entorno listo para empezar a armar el proyecto 
