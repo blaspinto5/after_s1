@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
   db:
     image: postgres:15
@@ -24,6 +26,23 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+  face-tracker:
+    build:
+      context: ./apps/face-tracker
+    container_name: face-tracker
+    restart: unless-stopped
+    environment:
+      - DISPLAY=:0
+
+  web-scraper:
+    build:
+      context: ./apps/web-scraper
+    container_name: web-scraper
+    volumes:
+      - ./apps/web-scraper:/app
+    command: scrapy crawl ejemplo -o resultados.json
+
 
 volumes:
   pgdata:
